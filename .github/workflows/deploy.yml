@@ -16,7 +16,7 @@ jobs:
     - name: Pull and deploy on server
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: 34.155.254.188
+        host: 34.155.190.101
         username: maalsi
         key: ${{ secrets.SSH_KEY }}
         script: |
