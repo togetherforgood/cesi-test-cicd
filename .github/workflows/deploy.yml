@@ -13,15 +13,15 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Pull and deploy on server
-      uses: appleboy/ssh-action@v0.1.7
-      with:
-        host: 34.155.168.225
-        username: maalsi
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd /srv/cesi-test-cicd
-          git pull origin main
-          docker compose down
-          docker compose up -d --build
+    #- name: Pull and deploy on server
+    #  uses: appleboy/ssh-action@v0.1.7
+    #  with:
+    #    host: 34.155.168.225
+    #    username: maalsi
+    #    key: ${{ secrets.SSH_KEY }}
+    #    script: |
+    #      cd /srv/cesi-test-cicd
+    #      git pull origin main
+    #      docker compose down
+    #      docker compose up -d --build
 
